@@ -10,3 +10,4 @@ jobs:
       - name: Log in with Azure
         run: |
          az login --service-principal -u "19c7de24-da45-4ea0-a95e-2a5d4666f38a" -p "1G~U4k~QSs2ZvCF_9AO3zd03OnnKEU.tg_" --tenant "bd5c6713-7399-4b31-be79-78f2d078e543"
+        shell: bash
