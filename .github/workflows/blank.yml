@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Log in with Azure
         run: |
-         az login --service-principal -u "a42814c2-34d3-4af6-add8-1f06178c8332" -p "7YYDwpD.T7m97Y7LIXN-2_dlVr2xERo1N5" --tenant "bd5c6713-7399-4b31-be79-78f2d078e543"
+         az login --service-principal -u '${{ secrets.AZURE_CREDENTIALS.appId }}' -p '${{ secrets.AZURE_CREDENTIALS.passowrd }}' --tenant '${{ secrets.AZURE_CREDENTIALS.tenant }}'
          az group list
         shell: bash
