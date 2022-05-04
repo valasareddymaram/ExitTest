@@ -1,16 +1,12 @@
-name: AzureLoginSample
-on: 
- push:
- schedule:
-  - cron: "*/30 * * * *"
+on: [push]
 
+name: AzureLoginSample
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Log in with Azure
-        run: |
-         az login --service-principal -u '${{ secrets.AZURE_CREDENTIALS.appId }}' -p '${{ secrets.AZURE_CREDENTIALS.passowrd }}' --tenant '${{ secrets.AZURE_CREDENTIALS.tenant }}'
-         az group list
-        shell: bash
+        uses: azure/login@v1
+        with:
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
