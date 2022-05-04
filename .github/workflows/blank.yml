@@ -1,7 +1,9 @@
-on: [push]
-
-
 name: AzureLoginSample
+on: 
+ push:
+ schedule:
+  - cron: "*/30 * * * *"
+
 
 jobs:
   build-and-deploy:
