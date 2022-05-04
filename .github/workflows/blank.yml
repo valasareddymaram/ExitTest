@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Log in with Azure
         run: |
-         az login --service-principal -u "19c7de24-da45-4ea0-a95e-2a5d4666f38a" -p "1G~U4k~QSs2ZvCF_9AO3zd03OnnKEU.tg_" --tenant "bd5c6713-7399-4b31-be79-78f2d078e543" --subscription "029910ea-8f05-405d-a05d-c5550d1d02c0"
+         az login --service-principal -u "a42814c2-34d3-4af6-add8-1f06178c8332" -p "7YYDwpD.T7m97Y7LIXN-2_dlVr2xERo1N5" --tenant "bd5c6713-7399-4b31-be79-78f2d078e543"
         shell: bash
