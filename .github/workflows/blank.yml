@@ -12,5 +12,5 @@ jobs:
       - name: Log in with Azure
         run: |
          az login --service-principal -u '${{ secrets.APPID}}' -p '${{ secrets.PASSWORD }}' --tenant '${{ secrets.TENANT}}'
-         az group list
+         az group list -o table
         shell: bash
